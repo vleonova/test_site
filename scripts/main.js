@@ -20,13 +20,13 @@ var myHeading = document.querySelector('h1');
 function setUserName() {
   var myName = prompt('Please enter your name.');         //prompt - вызывает диалоговое окно, просит ввести данные и сохраняет эти данные в переменной myName
   localStorage.setItem('name', myName);						//localStorage- апи, который позволяет нам хранить данные в браузере и извлекать их позднее , setItem- для создания и хранения данных введенных пользователем в свойстве под названием name
-  myHeading.innerHTML  = 'Приветик, ' + myName;		//innerHTML-свойство переменной,котор представляет собой контент заголовка
+  myHeading.innerHTML  = 'Привет, ' + myName;		//innerHTML-свойство переменной,котор представляет собой контент заголовка
 }
 if(!localStorage.getItem('name')) {							// проверяем нет ли в апи данных
   setUserName();   											//если их нет вызываем функцию setUserName
 } else {
   var storedName = localStorage.getItem('name');			//если есть данные введенные ранее, мы их присваим переменной storedName 
-  myHeading.innerHTML  = 'Приветик, ' + storedName;  //и дописываем к строке
+  myHeading.innerHTML  = 'Привет, ' + storedName;  //и дописываем к строке
 }
 myButton.onclick = function() { 							//при нажатии на кнопку вызываем функцию
   setUserName();
