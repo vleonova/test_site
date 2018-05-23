@@ -26,7 +26,7 @@ if(!localStorage.getItem('name')) {							// проверяем нет ли в �
   setUserName();   											//если их нет вызываем функцию setUserName
 } else {
   var storedName = localStorage.getItem('name');			//если есть данные введенные ранее, мы их присваим переменной storedName 
-  myHeading.innerHTML  = 'Привет, ' + storedName;  //и дописываем к строке
+  myHeading.innerHTML  = 'Приветик, ' + storedName;  //и дописываем к строке
 }
 myButton.onclick = function() { 							//при нажатии на кнопку вызываем функцию
   setUserName();
